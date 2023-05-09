@@ -78,19 +78,5 @@ var swiper = new Swiper(".galeria-slider", {
   },
 });
 
-var audio = document.getElementById('music-ebene2-background');
-
-document.getElementById('headset').addEventListener('click', function (e)
-{
-    e = e || window.event;
-    audio.muted = !audio.muted;
-
-    if(audio.muted){
-        document.getElementById('musicaOff').setAttribute('class', 'active_headset');
-    }else{
-        document.getElementById('headset').removeAttribute("class");
-    }
-    e.preventDefault();
-}, false);
 
 

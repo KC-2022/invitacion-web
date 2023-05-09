@@ -29,7 +29,7 @@ html{
 }
 
 body{
-  background: url(/img/15206849_10.jpg);
+  background: url(img/15206849_10.jpg);
   background-size: cover;
   background-position: center;
 }
@@ -216,7 +216,9 @@ section{
     width: 100%;
     margin: 1rem 0;
 }
-
+.home .contdown{
+    width: 100%;
+}
 .icons-container{
     padding-top: 5rem;
     padding-bottom: 5rem;
@@ -541,4 +543,5 @@ section{
     .heading{
         font-size: 2.5rem;
     }
+    
 }
