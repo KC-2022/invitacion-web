@@ -29,7 +29,7 @@ html{
 }
 
 body{
-  background: url(img/15206849_10.jpg);
+  background: url(/img/15206849_10.jpg);
   background-size: cover;
   background-position: center;
 }
@@ -213,11 +213,12 @@ section{
 }
 
 .home img{
-    width: 100%;
+    width: 80%;
     margin: 1rem 0;
 }
-.home .contdown{
-    width: 100%;
+.home #contdown{
+    width: 320px;
+    display: inline-block;
 }
 .icons-container{
     padding-top: 5rem;
@@ -535,6 +536,15 @@ section{
     .header .logo img{
         display: block;
     }
+    .home h1{
+        opacity: 0;
+    }
+    .home #contdown{
+        width:280px;
+    }
+    .home{
+        padding: 5rem 3rem 3rem 3rem;
+    }
 }
 @media(max-width:450px){
     html{
@@ -543,5 +553,19 @@ section{
     .heading{
         font-size: 2.5rem;
     }
-    
+    .home img{
+        width: 100%;
+        margin: 1rem 0;
+    }
+    .home {
+        padding: 4rem 3rem 3rem 3rem;
+
+    }
+    .home h1{
+        opacity: 0;
+    }
+    .home #contdown{
+        width:280px;
+    }
+
 }
