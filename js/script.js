@@ -85,7 +85,7 @@ const sonidoMusicaOn = document.getElementById('sonidoMusicaOn');
 const iconoMusica = document.getElementById('iconoMusica');
 const musica = document.getElementById('musica');
 
-
+musica.play();
 sonidoMusicaOff.addEventListener('click', () => {
     sonidoMusicaOff.classList.add('hidden');
     sonidoMusicaOn.classList.remove('hidden');
