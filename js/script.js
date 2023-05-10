@@ -99,6 +99,7 @@ sonidoMusicaOn.addEventListener('click', () => {
     iconoMusica.classList.remove('hidden');
     musica.pause();
 });
+musica.play();
 
 function validarFormulario() {
   const nombre = document.getElementById("nombre").value.trim();
