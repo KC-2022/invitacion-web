@@ -16,10 +16,10 @@
         <div id="menu-btn" class="fas fa-bars"></div>
         <a href="#" class="logo"><span>Miss</span>Quince</a>
         <nav class="navbar">
-            <a href="#inicio">Home</a>
-            <a href="#galeria">Recepcion</a>
-            <a href="#servicios">Galeria</a>
-            <a href="#contactanos">Play List</a>
+            <a href="#home">Home</a>
+            <a href="#ubicacion">Recepcion</a>
+            <a href="#galeria">Galeria</a>
+            <a href="#playlist">Play List</a>
         </nav>
         <div class="login-btn">
             <button class="btn">Confirma</button>
@@ -31,15 +31,16 @@
     <div class="login-form-container">     
         <span class="fas fa-times" id="close-login-form"></span>
 
-        <form action="">
+        <form action="https://formspree.io/f/mbjebjpz"
+        method="POST">
             <h3>Confirmar asistencia</h3>
-            <input type="email" placeholder="email" class="box">
-            <input type="nombre" placeholder="nombre" class="box">
-            <input type="submit" value="enviar" class="btn">
+            <input type="email" id="email" name="email" required placeholder="email" class="box">
+            <input type="name" id="nombre" name="nombre" required placeholder="nombre" class="box">
+            <input type="submit" value="enviar" onclick="return validarFormulario()" class="btn">
             <p>o confirmar por WhatssApp</p>
             <div class="buttons">
-                <a href="#" class="btn">Carla</a>
-                <a href="#" class="btn">Brisa</a>
+                <a href="https://api.whatsapp.com/send?phone=3516159377" target="_blank" class="btn">Carla</a>
+                <a href="https://api.whatsapp.com/send?phone=3512396452" target="_blank" class="btn">Brisa</a>
             </div>
         </form>
     </div>
@@ -144,7 +145,7 @@
         </div>
     </section>
 
-    <section class="playlist">
+    <section class="playlist" id="playlist">
         <h1 class="heading"> <span>Play</span> List</h1>
         <div class="row">
             <iframe class="video-y" src="https://www.youtube.com/embed/videoseries?list=PLQE6fwKhgam6Eolo12Oy7CWQZKh-RR2Jq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
@@ -161,19 +162,33 @@
     
     <!--inicio pie de pagina--> 
     <footer>
-    
-      </footer>
-<div class="musicaOff hidden" target="_blank" id="sonidoMusicaOff" style="cursor: pointer;">
+        <ul class="social_icon">
+            <li><a href="https://www.facebook.com/carlitacont/" target="_blank"><ion-icon name="logo-facebook"></ion-icon></a></li>
+            <li><a href="https://www.instagram.com/carlacontty/" target="_blank"><ion-icon name="logo-instagram"></ion-icon></a></li>
+            <li><a href="mailto:karlaconty@gmailcom" target="_blank"><ion-icon name="mail-open-outline"></ion-icon></a></li>
+            <li><a href="https://api.whatsapp.com/send?phone=3516159377" target="_blank"><ion-icon name="logo-whatsapp"></ion-icon></a></li>
+          </ul>
+          <ul class="menu">
+            <li><a href="https://api.whatsapp.com/send?phone=3516159377" target="_blank"><ion-icon name="logo-whatsapp"></ion-icon> Clic aquí para confirmar asistencia!</a></li>
+          </ul>
+          <p>&copy2023 Carla Contreras| Todos los Derechos Reservados</p>
+        </footer>
+    </footer>
+<div class="musicaOff hidden    " target="_blank" id="sonidoMusicaOff" style="cursor: pointer;">
     <i class="fa fa-volume-up flotante" id="iconoMusica"></i>
 </div>
 <div class="musicaOn" target="_blank" id="sonidoMusicaOn" style="cursor: pointer;">
     <img src="img\musica-on-4.gif">
 </div>
-<audio id="musica"src="img\Arctic Monkeys.mp3" autoplay loop></audio>
-<!--<audio src="Arctic Monkeys.mp3" autoplay loop></audio>--> 
+
+
+
+<audio id="musica" src="img\Arctic Monkeys.mp3" loop autoplay></audio>
+
 <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 <script src="js\script.js"></script>
+
 </body>
 </html>

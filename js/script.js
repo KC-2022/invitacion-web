@@ -50,7 +50,7 @@ document.querySelector('.home').onmouseleave= () =>{
       elm.style.transform = `translateX(0px) translateY(0px)`;
     });
   }
-
+//galeria
 var swiper = new Swiper(".galeria-slider", {
   slidesPerView: 1,
   spaceBetween: 20,
@@ -78,5 +78,45 @@ var swiper = new Swiper(".galeria-slider", {
   },
 });
 
+// Musica On - OFF
+
+const sonidoMusicaOff = document.getElementById('sonidoMusicaOff');
+const sonidoMusicaOn = document.getElementById('sonidoMusicaOn');
+const iconoMusica = document.getElementById('iconoMusica');
+const musica = document.getElementById('musica');
 
 
+sonidoMusicaOff.addEventListener('click', () => {
+    sonidoMusicaOff.classList.add('hidden');
+    sonidoMusicaOn.classList.remove('hidden');
+    iconoMusica.classList.add('hidden');
+    musica.play();
+});
+
+sonidoMusicaOn.addEventListener('click', () => {
+    sonidoMusicaOn.classList.add('hidden');
+    sonidoMusicaOff.classList.remove('hidden');
+    iconoMusica.classList.remove('hidden');
+    musica.pause();
+});
+
+function validarFormulario() {
+  const nombre = document.getElementById("nombre").value.trim();
+  const email = document.getElementById("email").value.trim();
+
+
+  // Validar nombre
+  if (nombre === "") {
+    alert("Por favor, ingrese su nombre");
+    return false;
+  }
+
+  // Validar email
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!emailRegex.test(email)) {
+    alert("Por favor, ingrese un correo electrónico válido");
+    return false;
+  }
+
+  return true;
+}
