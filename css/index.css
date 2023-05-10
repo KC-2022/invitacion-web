@@ -661,5 +661,8 @@ footer p {
     .home #contdown{
         width:280px;
     }
+    footer .menu li a{
+        font-size:1.6rem;
+    } 
 
 }
