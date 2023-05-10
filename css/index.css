@@ -216,10 +216,34 @@ section{
     width: 80%;
     margin: 1rem 0;
 }
-.home #contdown{
-    width: 320px;
-    display: inline-block;
-}
+
+
+.countdown {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+.countdown-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 2rem;
+    color: var(--pink);
+    margin: 0 10px;
+  }
+  
+.number {
+    font-weight: bold;
+    font-size: 3rem;
+  }
+  
+.text {
+    font-size:1.5rem;
+    text-transform: uppercase;
+    letter-spacing: .5px;
+    margin-top: 5px;
+  }
 .icons-container{
     padding-top: 5rem;
     padding-bottom: 5rem;

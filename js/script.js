@@ -120,3 +120,34 @@ function validarFormulario() {
 
   return true;
 }
+
+// Fehca evento
+var countDownDate = new Date("Oct 20, 2023 21:30:00").getTime();
+
+// actualizar evento cada 1 segundo
+var x = setInterval(function() {
+
+  // obtener fecha de hoy
+  var now = new Date().getTime();
+    
+  // distancia entre hoy al evento
+  var distance = countDownDate - now;
+    
+  // Tiempo en dias horas minutos y segundos
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+  //
+  document.querySelector(".days-count .number").innerHTML = days;
+  document.querySelector(".hours-count .number").innerHTML = hours;
+  document.querySelector(".mins-count .number").innerHTML = minutes;
+  document.querySelector(".secs-count .number").innerHTML = seconds;
+    
+  // 
+  if (distance < 0) {
+    clearInterval(x);
+    document.querySelector(".countdown").innerHTML = "LLEGO EL DIA";
+  }
+}, 1000);
