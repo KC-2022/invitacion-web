@@ -603,6 +603,57 @@ footer p {
     border: var(--border);
     border-radius: .5rem;
 }
+/* INSTAGRAM */
+
+section.instagram{
+    text-align: center;
+    height: 550px;
+    color:white;
+    z-index: 999;
+    overflow-x: hidden;
+    background: url(/img/instagram.jpg);
+    opacity: 0.7;
+  }
+  
+section.instagram .contenido{
+    padding: 50px 0px;
+  }
+  
+section.instagram span.hashtag{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 25px;
+    margin-top: 100px;
+    color:white;
+  }
+  
+  
+section.instagram p{
+    margin-top: 20px;
+    margin-bottom:30px;
+    color:white;
+    font-size: 2rem;
+  }
+  
+/*ANIMACION ICONOS*/
+
+.bounce-in {
+    animation: bounce-in 2s ease infinite;
+    width: 150px;
+  }
+  @keyframes bounce-in {
+    0% {
+      opacity: 0;
+      transform: scale(.3);
+    }
+    50% {
+      opacity: 1;
+      transform: scale(1.05);
+    }
+    70% { transform: scale(.9); }
+    100% { transform: scale(1); }
+  }
+  
+  /* ---------- */
 
 @media(max-width: 768px) {
     .musicaOn,.musicaOff {
