@@ -666,6 +666,9 @@ footer p {
     .home{
         padding: 5rem 3rem 3rem 3rem;
     }
+    .modal-content {
+        width: 60%;
+    }
 }
 @media(max-width:450px){
     html{
@@ -690,6 +693,9 @@ footer p {
     }
     footer .menu li a{
         font-size:1.6rem;
-    } 
+    }
+    .modal-content {
+        width: 60%;
+    }
 
 }
