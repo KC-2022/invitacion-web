@@ -577,6 +577,33 @@ footer p {
     opacity: 0.75;
 }
 
+.modal {
+    display: none; /* ocultar por defecto */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(60, 60, 60, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+.modal-content {
+    margin: 15% auto;
+    width: 40%;
+    background: #eee;
+    text-align: center;
+    text-transform: none;
+    color: var(--black);
+    font-size:1.9rem;
+    padding: 1rem 1.2rem;
+    border: var(--border);
+    border-radius: .5rem;
+}
+
 @media(max-width: 768px) {
     .musicaOn,.musicaOff {
         top:30%

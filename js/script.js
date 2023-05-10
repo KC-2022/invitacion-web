@@ -122,7 +122,7 @@ function validarFormulario() {
   return true;
 }
 
-// Fehca evento
+// Fech evento
 var countDownDate = new Date("Oct 20, 2023 21:30:00").getTime();
 
 // actualizar evento cada 1 segundo
@@ -152,3 +152,22 @@ var x = setInterval(function() {
     document.querySelector(".countdown").innerHTML = "LLEGO EL DIA";
   }
 }, 1000);
+
+// Obtener el modal y el botón de ingreso
+const modal = document.getElementById('modal-bienvenida');
+const botonIngresar = document.getElementById('boton-ingresar');
+
+// Cuando la página se carga, mostrar el modal
+window.addEventListener('load', () => {
+  modal.style.display = 'block';
+});
+
+// Cuando se presiona el botón de ingreso, ocultar el modal
+botonIngresar.addEventListener('click', () => {
+  modal.style.display = 'none';
+});
+const ingresarBtn = document.getElementById('boton-ingresar');
+
+ingresarBtn.addEventListener('click', () => {
+  musica.play();
+});
